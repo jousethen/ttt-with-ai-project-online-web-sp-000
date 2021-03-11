@@ -9,7 +9,7 @@ def p_v_p
 end
 
 def p_v_c
-  token = ["X","O"].shuffle
+  token = ["X","O"].shuffle!
   binding.pry
   c1 = Players::Computer.new(token[0])
   p1 = Players::Human.new(token[1])
