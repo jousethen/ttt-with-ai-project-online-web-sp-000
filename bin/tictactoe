@@ -18,8 +18,10 @@ def p_v_c
 end
 
 def c_v_c
-  c1 = Players::Computer.new(token[0])
-  p1 = Players::Human.new(token[1])
+  c1 = Players::Computer.new("X")
+  c2 = Players::Human.new("Y")
+  g = Game.new(c1, c2)
+  g.play
 end
 
 
