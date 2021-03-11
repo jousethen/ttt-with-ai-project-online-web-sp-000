@@ -116,6 +116,7 @@ module Players
     end
     
     def move(board)
+      input = ""
       until board.valid_move?(input) do
         input = determine_move(board)
       end
