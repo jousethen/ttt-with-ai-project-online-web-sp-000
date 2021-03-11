@@ -122,6 +122,7 @@ module Players
       end
       
       board.update(input, self)
+      puts "\n"
       return input
     end
   end
