@@ -19,7 +19,7 @@ end
 
 def c_v_c
   c1 = Players::Computer.new("X")
-  c2 = Players::Human.new("Y")
+  c2 = Players::Computer.new("Y")
   g = Game.new(c1, c2)
   g.play
 end
