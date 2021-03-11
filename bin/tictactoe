@@ -11,8 +11,8 @@ end
 def p_v_c
   first = ["X","O"].shuffle
   binding.pry
-  c1 = Players::Computer.new("O")
-  p1 = Players::Human.new("X")
+  c1 = Players::Computer.new(first[0])
+  p1 = Players::Human.new(first[1])
   
   
   
