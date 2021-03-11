@@ -82,7 +82,8 @@ module Players
       end
       return false
     end
-  
+    
+    # determine 'best' possible move
     def determine_move(board)
       win_index = []
       corners = [0,2,6,8]
@@ -115,9 +116,12 @@ module Players
     end
     
     def move(board)
-       until board.valid_move?(input) do
-        input determine_move(board)
+      until board.valid_move?(input) do
+        input = determine_move(board)
       end
+      
+      board.update(input, self)
+      return input
     end
   end
 end
