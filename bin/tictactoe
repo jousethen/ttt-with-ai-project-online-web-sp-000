@@ -16,6 +16,10 @@ def p_v_c
   if [0,1].shuffle[0] == 0
     g = Game.new(p1, c1)
     g.play
+  else
+    g = Game.new(c1, p1)
+    g.play
+  end
   
 end
 
