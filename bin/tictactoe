@@ -9,10 +9,12 @@ def p_v_p
 end
 
 def p_v_c
+  first = ["X","O"].shuffle
+  binding.pry
   c1 = Players::Computer.new("O")
   p1 = Players::Human.new("X")
   
-  first = [0,1]
+  
   
   g = Game.new(c1, p1)
   g.play
