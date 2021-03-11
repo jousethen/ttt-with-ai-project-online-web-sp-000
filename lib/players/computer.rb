@@ -83,7 +83,7 @@ module Players
       return false
     end
   
-    def move(board)
+    def determine_move(board)
       win_index = []
       corners = [0,2,6,8]
       non_corners = [1,3,5,7]
@@ -111,6 +111,12 @@ module Players
         end
         open_space = board.cells.index(" ") + 1
         return open_space.to_s
+      end
+    end
+    
+    def move(board)
+       until board.valid_move?(input) do
+        input determine_move(board)
       end
     end
   end
