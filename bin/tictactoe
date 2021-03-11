@@ -12,8 +12,9 @@ def p_v_c
   c1 = Players::Computer.new("O")
   p1 = Players::Human.new("X")
   
-  
-  if [0,1].shuffle[0] == 1
+  first = [0,1]
+ 
+  if first.shuffle[0] == 1
     g = Game.new(p1, c1)
     g.play
   else
