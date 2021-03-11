@@ -11,16 +11,15 @@ end
 def p_v_c
   token = ["X","O"]
   token.shuffle!
-  binding.pry
   c1 = Players::Computer.new(token[0])
   p1 = Players::Human.new(token[1])
-  
-  
-  
   g = Game.new(c1, p1)
   g.play
+end
 
-  
+def c_v_c
+  c1 = Players::Computer.new(token[0])
+  p1 = Players::Human.new(token[1])
 end
 
 
