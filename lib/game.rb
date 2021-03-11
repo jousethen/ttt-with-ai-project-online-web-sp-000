@@ -21,13 +21,16 @@ class Game
     turn = @board.turn_count
     
     if turn % 2 == 0 
-      return @player_1 if @player_1.token == "X"
+     current_token = "X"
     else
-      return @player_1 if @player_1.token == "O"
+     current_token = "O"
     end
-    
-    return @player_2
-    # note: Not sure if this is the cleanest way to do this. Will come back to it if better solution found
+        
+    if @player_1.token == current_token
+      return @player_1
+    else
+      return @player_2
+    end
   end
   
   def won?
